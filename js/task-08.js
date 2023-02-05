@@ -8,6 +8,23 @@
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
 
-const loginForm = document.querySelector("login-form")
 
-console.dir(loginForm);
+    
+const loginForm = document.querySelector(".login-form");
+
+const loginFormSubmit = (event) => {
+    event.preventDefault();
+    
+    const formElements = event.currentTarget.elements;
+  const email = formElements.email.value;
+  const password = formElements.password.value;
+  const formData = {
+    email,
+    password,
+  };
+  email === "" || password === ""
+    ? alert("Заповніть форму")
+    : console.log(formData);
+  event.currentTarget.reset();
+};
+loginForm.addEventListener("submit", loginFormSubmit);
