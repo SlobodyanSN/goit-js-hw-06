@@ -11,7 +11,7 @@ input.addEventListener("input", trasition);
 function trasition(event) {
     if (event.currentTarget.value !== "" ) {
         output.textContent = event.currentTarget.value;
-        console.log(output);
+       
         return
     }
     output.textContent = "Anonymous"
