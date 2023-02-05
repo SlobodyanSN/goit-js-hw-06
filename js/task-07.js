@@ -10,7 +10,7 @@ console.dir(txt);
 
 
 
-input.addEventListener(`change`, (event) => {
+input.addEventListener(`input`, (event) => {
     const currentFontSize = event.currentTarget.value;
 
     console.log(currentFontSize);
