@@ -11,11 +11,11 @@ console.dir(txt);
 
 
 input.addEventListener(`change`, (event) => {
-    const fontSize = event.currentTarget.value;
+    const currentFontSize = event.currentTarget.value;
 
-    console.log(fontSize);
+    console.log(currentFontSize);
 
-    txt.style.fontSize = `${fontSize}px`
+    txt.style.fontSize = `${currentFontSize}px`
 }
 );
 
