@@ -7,11 +7,7 @@ function getRandomHexColor() {
 
 const nameOfB_G_C = document.querySelector(".color");
 
-// console.log(nameOfB_G_C);
-
 const butoonChangeB_G_C = document.querySelector(".change-color");
-
-// console.log(butoonChangeB_G_C);
 
 let newB_G_C = getRandomHexColor();
 

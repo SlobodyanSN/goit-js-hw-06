@@ -22,9 +22,12 @@ const loginFormSubmit = (event) => {
     email,
     password,
   };
-  email === "" || password === ""
-    ? alert("Заповніть форму")
-    : console.log(formData);
+  if (email === "" || password.trim() === "") {
+    alert("Заповніть форму")
+    return
+  }
+  console.log(formData);
   event.currentTarget.reset();
+ 
 };
 loginForm.addEventListener("submit", loginFormSubmit);

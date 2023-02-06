@@ -7,31 +7,24 @@
 
 const inputEll = document.querySelector(`#validation-input`);
 
-// console.log(inputEll);
-
 const normalInputLength = Number(inputEll.dataset.length);
 
-// console.log(normalInputLength);
-
-
+function replaseClass(addClassName, removeClassName) {
+    inputEll.classList.add(addClassName);
+     inputEll.classList.remove(removeClassName);
+}
 
 inputEll.addEventListener(`blur`, validationByLength);
 
 function validationByLength() {
 
-    // console.log(inputEll.value.length); 
-
-    // console.log(normalInputLength)
-
+  
     if (inputEll.value.length === normalInputLength) {
 
-        inputEll.classList.add(`valid`)
-
-        inputEll.classList.remove(`invalid`)
-        
+        replaseClass(`valid`, `invalid`);
+    
     } else {
 
-        inputEll.classList.add(`invalid`)
-        inputEll.classList.remove(`valid`)
+         replaseClass(`invalid`,`valid` );   
     }
 }

@@ -9,7 +9,7 @@ const output = document.querySelector(`#name-output`);
 input.addEventListener("input", trasition);
 
 function trasition(event) {
-    if (event.currentTarget.value !== "" ) {
+    if (event.currentTarget.value.trim() ) {
         output.textContent = event.currentTarget.value;
        
         return

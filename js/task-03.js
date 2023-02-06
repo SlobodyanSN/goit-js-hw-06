@@ -29,7 +29,6 @@ const images = [
 
 const gallery = document.querySelector(`.gallery`)
 
-console.log(gallery);
 
 gallery.style.listStyle = "none";
 
@@ -40,9 +39,6 @@ gallery.style.gap = "30px";
 const galleryElements = images.map(({ url, alt }) => `<li><img class="img" src="${url}" alt="${alt}" width = "250"></li>`)
 
   .join("");
-
-console.log(galleryElements);
   
 gallery.insertAdjacentHTML("afterbegin", galleryElements);
 
-console.log(gallery);
